@@ -29,7 +29,7 @@ public class ApiService
             if (AuthorizedUser is not null)
             {
 
-                UserInfo = await SendAsync<UserRecord>(HttpMethod.Get, "api/users/self", onError: onError);
+              //  UserInfo = await SendAsync<UserRecord>(HttpMethod.Get, "api/users/self", onError: onError);
 
                 SavedCredential.Save(email, password, AuthorizedUser.jwt, AuthorizedUser.refreshToken);
             }
