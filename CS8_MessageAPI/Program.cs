@@ -17,11 +17,14 @@ await apiService.Login("sana.khan@winsor.edu", "002@*$jmoHMT",
 if(!loginSuccess)
     return;
 
-var myFreeBlocks = await apiService.SendAsync<Section[]>(
-    HttpMethod.Get, "api/schedule/academics?detailed=true",
-    err =>
-    {
-        Console.WriteLine(err);
-    });
-    
-    Console.WriteLine(myFreeBlocks);
+var assesments = await apiService.SendAsync<AssesmentCalendar[]>(HttpMethod.Get,"api/assessment-calendar",err =>
+{
+    Console.WriteLine(err);
+    loginSuccess = false;
+});;
+
+foreach (var assesment in assesments)
+{
+Console.WriteLine(assesment);
+
+}

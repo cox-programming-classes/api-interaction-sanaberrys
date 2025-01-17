@@ -5,7 +5,8 @@ namespace CS8_MessageAPI.Models;
 /// <param name="blockId"></param>
 /// <param name="name">Name of the Block</param>
 /// <param name="schoolLevel">Upper or Lower SChool</param>
-public record Block (
+///
+/*public record Block (
     string blockId,
     string name,
     string schoolLevel);
@@ -33,4 +34,4 @@ public record FreeBlockCollection(
     FreeBlock[] FreeBlock,
     DateOnly[] inRange);
     
-    
+  */  
